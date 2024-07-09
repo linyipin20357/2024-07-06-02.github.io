@@ -15,7 +15,6 @@ function setup() {
 
 function draw() {
   background(bg);
-  image(bg, 0, 0, width, height);
   for (let petal of petals) {
     petal.update();
     petal.display();
