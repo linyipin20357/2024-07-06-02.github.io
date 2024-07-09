@@ -1,7 +1,6 @@
 let bg;
 let petals = [];
 let bgWidth, bgHeight;
-let fullscreenButton;
 
 function preload() {
   // 載入背景圖
@@ -11,12 +10,6 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   calculateBackgroundSize();
-  
-  // 創建全屏按鈕
-  fullscreenButton = createButton('全螢幕');
-  fullscreenButton.position(10, 10);
-  fullscreenButton.mousePressed(toggleFullscreen);
-  
   for (let i = 0; i < 100; i++) {
     petals.push(new Petal());
   }
@@ -31,11 +24,6 @@ function draw() {
     petal.update();
     petal.display();
   }
-}
-
-function toggleFullscreen() {
-  let fs = fullscreen();
-  fullscreen(!fs);
 }
 
 class Petal {
