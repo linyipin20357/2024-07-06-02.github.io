@@ -8,6 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(600, 867);
+  bg.resize(width, height);
   for (let i = 0; i < 100; i++) {
     petals.push(new Petal());
   }
